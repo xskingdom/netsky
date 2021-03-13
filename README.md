@@ -111,4 +111,4 @@ nohup python3.9 netsky_alert.py > ./netsky_alert.log 2>&1 &
 ```
 
 ### 效果展示
-![image](https://github.com/arnohub/netksy/blob/main/example.png)
+![image](https://github.com/arnohub/netsky/blob/main/example.png)
