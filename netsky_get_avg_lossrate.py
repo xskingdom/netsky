@@ -47,7 +47,7 @@ def get_avg_lossrate(isp):
     elif isp == 'ct':
         lossrate_name_list = mysql_ct_lossrate_name_list
     for i in lossrate_name_list:
-        sql_last_12hour_lossrate = "select CAST(AVG(value) AS DECIMAL(10,2)) from netsky_lossrate where update_time >=  NOW() - interval 6 hour and name='{}'".format(i)
+        sql_last_12hour_lossrate = "select CAST(AVG(value) AS DECIMAL(10,2)) from netsky_lossrate where update_time >=  NOW() - interval 12 hour and name='{}'".format(i)
         cursor.execute(sql_last_12hour_lossrate)
         avg_values = float(re.findall('(?<=\').*?(?=\')', str(cursor.fetchall()))[0])
         avg_values_list.append(avg_values)
